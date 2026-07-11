@@ -241,7 +241,7 @@
     (() => {
       const currency = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 0 });
       const number = new Intl.NumberFormat('es-MX', { maximumFractionDigits: 2 });
-      const storageKey = 'clara-finanzas-v1';
+      const storageKey = 'clara-finanzas-v2';
       const expenseCategories = ['Alimentación', 'Vivienda', 'Transporte', 'Servicios', 'Salud', 'Entretenimiento', 'Compras', 'Educación', 'Otros'];
       const incomeCategories = ['Sueldo', 'Freelance', 'Ventas', 'Rendimientos', 'Regalo', 'Otros ingresos'];
       const icons = { 'Alimentación':'◉', 'Vivienda':'⌂', 'Transporte':'↗', 'Servicios':'◌', 'Salud':'+', 'Entretenimiento':'☆', 'Compras':'□', 'Educación':'▤', 'Sueldo':'↙', 'Freelance':'✦', 'Ventas':'◈', 'Rendimientos':'↗', 'Regalo':'♡', 'Otros':'•', 'Otros ingresos':'•', 'Traspaso':'⇄' };
@@ -291,8 +291,9 @@
           ]
         };
       };
+      const createEmptyData = () => ({ accounts: [], budgets: [], transactions: [] });
       let data;
-      try { data = JSON.parse(localStorage.getItem(storageKey)) || sample(); } catch { data = sample(); }
+      try { data = JSON.parse(localStorage.getItem(storageKey)) || createEmptyData(); } catch { data = createEmptyData(); }
       let selectedMonth = currentMonth;
       const $ = selector => document.querySelector(selector);
       const $$ = selector => [...document.querySelectorAll(selector)];
