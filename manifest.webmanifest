@@ -1,6 +1,6 @@
 {
-  "name": "Clara — Finanzas personales",
-  "short_name": "Clara",
+  "name": "Mi Saldo — Finanzas personales",
+  "short_name": "Mi Saldo",
   "description": "Control claro y personal de ingresos, gastos, cuentas y presupuestos.",
   "lang": "es-MX",
   "start_url": "./",
