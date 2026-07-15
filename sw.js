@@ -1,4 +1,4 @@
-const CACHE_NAME = 'clara-finanzas-v3';
+const CACHE_NAME = 'clara-finanzas-v4';
 const APP_FILES = [
   './',
   './index.html',
